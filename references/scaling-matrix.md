@@ -37,6 +37,8 @@ CONTEXT.md           # 术语表
 docs/adr/000X-*.md   # 关键决策
 tasks/todo.md        # 唯一任务清单
 tasks/plan.md        # 可选，需要拆阶段时
+docs/charter.md      # 可选，目标与范围（"不做什么"防范围蔓延）
+docs/进展.md         # 交接日志，新的追加在最上面，顶部即当前棒
 ```
 
 ### 大型（团队 / 长期 / 合规）
@@ -45,6 +47,7 @@ tasks/plan.md        # 可选，需要拆阶段时
 
 ```
 中型全套 +
+docs/charter.md      # 必建，目标与范围（中型可选 → 大型必建）
 CONSTRAINTS.md       # 质量门槛带数字（覆盖率/性能/包体积阈值）
 tasks/plan.md        # 必选
 specs/               # 功能规格
@@ -117,9 +120,9 @@ Spec Kit 的第一条命令叫 `/speckit.constitution`，与本技能同名，**
 ```
 小型 AGENTS.md
    ↓ 开始有迭代、有多人
-+ CONTEXT.md + docs/adr/ + tasks/todo.md   → 中型
++ CONTEXT.md + docs/adr/ + tasks/todo.md + docs/进展.md   → 中型
    ↓ 有合规要求或团队扩张
-+ CONSTRAINTS.md + specs/ + 子目录 AGENTS.md → 大型
++ docs/charter.md（必建）+ CONSTRAINTS.md + specs/ + 子目录 AGENTS.md → 大型
 ```
 
 反向也成立：项目进入维护期后，可以砍掉 plan/specs，保留 AGENTS.md + ADR。
